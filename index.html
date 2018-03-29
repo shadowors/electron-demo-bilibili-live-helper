@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提醒助手</title>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <!--jquery兼容electron ⬇️-->
+    <script>if (typeof module === 'object') {window.jQuery = window.$ = module.exports;};</script>
+    <link rel="stylesheet" type=text/css href="assets/css/cssreset.css">
+    <link rel="stylesheet" type=text/css href="assets/css/index.css">
+</head>
+<body>
+<div class="header-arrow"></div>
+<div class="body">
+    <div class="header">
+        <div class="title">
+            <h2>bilibili直播助手</h2>
+        </div>
+        <div class="postId">
+            <input class="control" placeholder="请输入主播的房间号" id="room_id"><button class="control btn" id="submit_room_id">提交</button>
+        </div>
+    </div>
+    <div class="anchor">
+        <ul class="anchor-list">
+        </ul>
+    </div>
+</div>
+</body>
+<script>
+    require('./renderer-process/submitId');
+    require('./renderer-process/addList');
+    require('./renderer-process/updateNotice');//每隔几秒发送一个请求事件
+    require('./renderer-process/Notice');//发送到这里可以触发提醒
+    require('./renderer-process/changeStatus');//发送到这里可以触发提醒
+</script>
+</html>

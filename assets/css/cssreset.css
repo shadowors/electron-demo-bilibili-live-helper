@@ -1,0 +1,66 @@
+/*cssrest*/
+.body{
+    /*-webkit-box-shadow:10px 10px 0 10px;*/
+}
+.NotLive{
+    color: #c1c1c1;
+    -webkit-filter: grayscale(100%);
+}
+.NotLive a{
+    /*color: #585858;*/
+}
+.NotLive:hover{
+}
+p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+button[disabled] {
+    cursor: not-allowed;
+    background-color: #209cee;
+    border-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: 0.5;
+}
+.btn:hover {
+    background: #1496ed;
+}
+
+.btn:active {
+    background: #118fe4;
+}
+
+.btn:focus {
+    -webkit-box-shadow: 0 0 0 0.125em rgba(32, 156, 238, 0.25);
+    -moz-box-shadow: 0 0 0 0.125em rgba(32, 156, 238, 0.25);
+    box-shadow: 0 0 0 0.125em rgba(32, 156, 238, 0.25)
+}
+
+input:focus {
+    border-color: #3273dc;
+    -moz-box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+    box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    padding: 0;
+    margin: 0;
+    /*color: #fff;!*test*!*/
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+button {
+    outline: 0;
+}
